@@ -10,3 +10,10 @@ Resolution of first exercise: A service to provide a search lookup within the po
   4. Using the terminal you write the next instruction: python app.py
   5. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcasts/Nice%20White%20Parents to filter by podcast name
   5. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcastsname/The%20New%20York%20Times to filter by podcast artist name
+
+Resolution of second exercise: A service that would allow to save the top 20 podcasts to a separate JSON File
+  1. The file app.py was modified, it was added the route '/podcaststop20'
+  2. Using the framework of your preference, you can visualize the file. In this case, Visual Studio Code was used.
+  3. Using the terminal you write the next instruction: python app.py
+  4. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcaststop20 
+  5. Once the process finished, the file podcastTop20.json is created in the main folder.
