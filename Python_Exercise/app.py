@@ -39,18 +39,29 @@ def getPodcastsTop20():
             data = data + str(podcaststop20[pod])
             pod = pod + 1
     
-    with open('podcastTop20.json', 'w') as json_file: # The new JSON with the top 20 is created
+    with open('20podcasts.json', 'w') as json_file: # The new JSON with the top 20 is created
         json.dump(data, json_file, indent=4)
     
-    return jsonify({"message":"Top 20 Podcasts were created successfully in podcastTop20.json. Please, verify on your main folder"})
+    return jsonify({"message":"Top 20 Podcasts were created successfully in 20podcast.json. Please, verify on your main folder"})
 
+
+#The next route will help us to replace the top 20 podcasts for the bottom 20 podcasts
+@app.route('/podcastsbottom20') 
+def getPodcastsBottom20():
+    podcastsbottom20 = [podcast for podcast in  podcasts] #with this line all the JSON is read
+    podInf = len(podcastsbottom20)-20
+    podSup = len(podcastsbottom20)-1
+    data = ''
+
+    if (len(podcastsbottom20) > 0): # The JSON is validated to have information
+        while podInf <= podSup: # the botttom 20 podcasts are read and saved in the variable data
+            data = data + str(podcastsbottom20[podInf])
+            podInf = podInf + 1
     
-   
-       # return jsonify({"podcast": podcaststop20})
+    with open('20podcasts.json', 'w') as json_file: # The top 10 podcasts are replaced by the bottom 20 podcasts
+        json.dump(data, json_file, indent=4)
     
-    # podcaststop20 = jsonify(podcasts)
-    # with open('podcastsTop20.json', 'w') as json_file:
-    #     json.dump(podcaststop20, json_file)
+    return jsonify({"message":"The top 10 podcasts were replaced by the bottom 20 podcasts successfully in 20podcast.json. Please, verify on your main folder"})
 
 
 if __name__ == '__main__':
