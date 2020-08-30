@@ -17,3 +17,10 @@ Resolution of second exercise: A service that would allow to save the top 20 pod
   3. Using the terminal you write the next instruction: python app.py
   4. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcaststop20 
   5. Once the process finished, the file podcastTop20.json is created in the main folder.
+ 
+Resolution of third exercise: A service to replace the top 20 podcasts for the bottom 20 to said JSON File
+  1. The file app.py was modified, it was added the route '/podcastsbottom20'
+  2. Using the framework of your preference, you can visualize the file. In this case, Visual Studio Code was used.
+  3. Using the terminal you write the next instruction: python app.py
+  4. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcastsbottom20
+  5. Once the process finished, the file 20podcasts.json is updated in the main folder.
