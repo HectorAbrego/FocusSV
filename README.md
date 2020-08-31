@@ -24,3 +24,10 @@ Resolution of third exercise: A service to replace the top 20 podcasts for the b
   3. Using the terminal you write the next instruction: python app.py
   4. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcastsbottom20
   5. Once the process finished, the file 20podcasts.json is updated in the main folder.
+
+Resolution of fourth exercise: A service to remove a podcast, using a given identifier (defined by you)
+  1. The file app.py was modified, it was added the route '/podcastsdelete'
+  2. Using the framework of your preference, you can visualize the file. In this case, Visual Studio Code was used.
+  3. Using the terminal you write the next instruction: python app.py
+  4. Open your preferred browser and write in the url bar the next example url http://localhost:5000/podcastsdelete/Duolingo
+  5. Once the process finished, the file newjson.json is created in the main folder.
