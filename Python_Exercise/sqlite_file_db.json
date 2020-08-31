@@ -1,0 +1,22 @@
+[
+    {
+        "element_id": "12345",
+        "elemento_nombre": "carro",
+        "elemento_categoria": "sedan"
+    },
+    {
+        "element_id": "45678",
+        "elemento_nombre": "moto",
+        "elemento_categoria": "carrera"
+    },
+    {
+        "element_id": "98765",
+        "elemento_nombre": "avion",
+        "elemento_categoria": "carga"
+    },
+    {
+        "element_id": "22335",
+        "elemento_nombre": "barco",
+        "elemento_categoria": "trasatlantico"
+    }
+]
