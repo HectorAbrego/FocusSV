@@ -64,5 +64,31 @@ def getPodcastsBottom20():
     return jsonify({"message":"The top 10 podcasts were replaced by the bottom 20 podcasts successfully in 20podcast.json. Please, verify on your main folder"})
 
 
+#The next route will help us to delete an element of the JSON
+@app.route('/podcastsdelete/<string:podcast_artistName>') 
+def getPodcastsDelete(podcast_artistName):
+    idPodcast = 0
+    lastPodcast = len(podcasts)
+    loEncontro = False
+
+    for podcast in podcasts:
+        idPodcast = idPodcast + 1
+        if podcast['artistName'] == podcast_artistName: 
+            loEncontro = True
+            break
+    
+    if (loEncontro == True):
+        if (idPodcast == lastPodcast):
+            idPodcast = idPodcast - 1
+    else:
+        return jsonify({"message":"Podcast not found"})
+    
+    podcasts.pop(idPodcast)
+    with open('newjson.json', 'w') as json_file: 
+        json.dump(podcasts, json_file, indent=4)
+
+    return jsonify({"message":"The JSON's element was deleted successfully"})
+            
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
